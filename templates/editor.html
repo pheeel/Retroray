@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Retroray</title>
+    <meta name="description" content="Retroray application">
+    <meta name="author" content="https://github.com/pheeel">
+    <link rel="stylesheet" href="../static/styles/editor.css">
+    <link rel="stylesheet" href="../static/styles/rangeFiler.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script src="../static/js/custom.js"></script>
+</head>
+
+<body>
+    <a href="{{ url_for('retroray_app') }}"></a>
+    <div class="col-1">
+        <header>
+            <div class="introduction">
+                <span class="this">>This is</span>
+                <span class="logo">retroray</span>
+                <span class="cursor"></span>
+            </div>
+            <p>An application that will help you create an amazing retro-stylized pictures.</p>
+            <p>Just drag any picture you want or <a href=""> load it manually</a> (Max. size 5MB)</p>
+
+        </header>
+        <main class="content">
+            <div class="original">
+                <img src="{{url_for('show_original_image', filename=image_name)}}" alt="Original Image">
+            </div>
+            <div class="result">
+                <img src="" alt="Result Image">
+            </div>
+        </main>
+        <footer>Footer</footer>
+    </div>
+    <div class="col-2">
+        <form action="">
+            <ul>
+                <li>
+                    <div class="filterWrapper">
+                        <span class="filerName">Pixelization</span>
+                        <div class="sliderWrapper">
+                            <input class="slider"  type="range" min="0" max="100" step="1"
+                                   value="0" oninput="getValueFromRange(this.value, 'pixelization')" onchange="getValueFromRange(this.value, 'pixelization')"/>
+                            <span class="filterValue" id="pixelization">0</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="filterWrapper">
+                        <span class="filerName">test</span>
+                        <div class="sliderWrapper">
+                            <input class="slider" name="test" type="range" min="0" max="100" step="1" value="50"/>
+                            <span class="filterValue">100</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="filterWrapper">
+                        <span class="filerName">test</span>
+                        <div class="sliderWrapper">
+                            <input class="slider" name="test" type="range" min="0" max="100" step="1" value="50"/>
+                            <span class="filterValue">100</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="filterWrapper">
+                        <span class="filerName">test</span>
+                        <div class="sliderWrapper">
+                            <input class="slider" name="test" type="range" min="0" max="100" step="1" value="50"/>
+                            <span class="filterValue">100</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="filterWrapper">
+                        <span class="filerName">test</span>
+                        <div class="sliderWrapper">
+                            <input class="slider" name="test" type="range" min="0" max="100" step="1" value="50"/>
+                            <span class="filterValue">100</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="filterWrapper">
+                        <span class="filerName">test</span>
+                        <div class="sliderWrapper">
+                            <input class="slider" name="test" type="range" min="0" max="100" step="1" value="50"/>
+                            <span class="filterValue">100</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
