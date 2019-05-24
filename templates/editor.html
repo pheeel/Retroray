@@ -16,16 +16,7 @@
 <body>
     <a href="{{ url_for('retroray_app') }}"></a>
     <div class="col-1">
-        <header>
-            <div class="introduction">
-                <span class="this">>This is</span>
-                <span class="logo">retroray</span>
-                <span class="cursor"></span>
-            </div>
-            <p>An application that will help you create an amazing retro-stylized pictures.</p>
-            <p>Just drag any picture you want or <a href=""> load it manually</a> (Max. size 5MB)</p>
-
-        </header>
+        
         <main class="content">
             <div class="original">
                 <img src="{{url_for('show_original_image', filename=image_name)}}" alt="Original Image">
@@ -34,7 +25,9 @@
                 <img src="" alt="Result Image">
             </div>
         </main>
-        <footer>Footer</footer>
+        <footer>
+            <span class="logo">>retroray</span>
+        </footer>
     </div>
     <div class="col-2">
         <form action="">
