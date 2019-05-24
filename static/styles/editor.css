@@ -24,16 +24,11 @@ a:hover {
   box-shadow: 1.1px 1.1px 15px #f04948, 0 0 1.1px #f26060
 }
 
-
-
-
-
 .col-1 {
   display: flex;
   flex-direction: column;
   flex: 5;
   background: #19191A;
-  border-left: 5px solid #826ed5;
 }
 
 .col-2 {
@@ -54,32 +49,10 @@ a:hover {
   min-height: 95vh;
 }
 
-footer {
-  min-height: 5vh;
-  padding: 1em;
-
-  background-color: #282828;
-  color: #F03D40;
-  border: 5px solid #826ed5;
-  border-right-style: none;
-  border-left-style: none;
-}
-
-.logo {
-  font-size: 20px;
-  text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 0px 2px rgba(52, 251, 12, 1);
-  animation: chromaticMove 4500ms ease infinite,pulse ease 200ms  infinite;
-  color:#fff;
-  padding: 6px 0 6px 0;
-  background: #F03D40;
-  box-shadow: 1.1px 1.1px 15px #f04948, 0 0 1.1px #f26060;
-}
-
  @keyframes slidein {
    from {
      background-color: #fff;
      box-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 0px 2px rgba(52, 251, 12, 1);
-     /*box-shadow: 1.1px 1.1px 15px #f04948, 0 0 1.1px #26ff00;*/
    }
    to {
      background-color: #282828;
