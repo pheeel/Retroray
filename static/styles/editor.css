@@ -49,23 +49,23 @@ a:hover {
   min-height: 95vh;
 }
 
-  @keyframes slidein {
-    from {
-      background-color: #fff;
-      box-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 0px 2px rgba(52, 251, 12, 1);
-    }
-    to {
-      background-color: #282828;
-      box-shadow: none;
-    }
+@keyframes slidein {
+  from {
+    background-color: #fff;
+    box-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 0px 2px rgba(52, 251, 12, 1);
   }
-  @keyframes pulse {
-    0%{ opacity:.9;transform: skewX(.5deg);}
-    25%{ opacity:1;}
-    50%{opacity:.9;}
-    75%{ opacity:1; transform:skewX(.5deg);}
-    100%{opacity:.9;}
+  to {
+    background-color: #282828;
+    box-shadow: none;
   }
+}
+@keyframes pulse {
+  0%{ opacity:.9;transform: skewX(.5deg);}
+  25%{ opacity:1;}
+  50%{opacity:.9;}
+  75%{ opacity:1; transform:skewX(.5deg);}
+  100%{opacity:.9;}
+}
 
 .filerName {
   padding-left: 5px;
@@ -78,26 +78,26 @@ a:hover {
 }
 
 .sliderWrapper  {
- display: flex;
- flex-wrap: nowrap;
- align-content: center;
- color: white;
- padding: .2em;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  color: white;
+  padding: .2em;
 }
 .slider{
- flex-basis: 80%;
+  flex-basis: 80%;
 }
 
 .filterValue {
- flex-basis: 20%;
- text-align: center;
- padding-top: 5px;
- border: 2px solid #000;
- text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 0px 2px rgba(52, 251, 12, 1);
- animation: chromaticMove 4500ms ease infinite,pulse ease 200ms  infinite;
- color:#fff;
- background: #F03D40;
- box-shadow: 1.1px 1.1px 15px #f04948, 0 0 1.1px #f26060;
+  flex-basis: 20%;
+  text-align: center;
+  padding-top: 5px;
+  border: 2px solid #000;
+  text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 0px 2px rgba(52, 251, 12, 1);
+  animation: chromaticMove 4500ms ease infinite,pulse ease 200ms  infinite;
+  color:#fff;
+  background: #F03D40;
+  box-shadow: 1.1px 1.1px 15px #f04948, 0 0 1.1px #f26060;
 }
 
 ul {
