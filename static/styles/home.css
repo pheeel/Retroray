@@ -88,6 +88,9 @@ a:hover {
     color: #fff;
     text-align: center;
 }
+.mainWrapper > .upload {
+    font-size: 15px;
+}
 
 @keyframes slidein {
     from {

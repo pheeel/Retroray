@@ -14,12 +14,11 @@
 </head>
 
 <body>
-    <a href="{{ url_for('retroray_app') }}"></a>
+    <a href="{{ url_for('upload') }}"></a>
     <div class="col-1">
-        
         <main class="content">
             <div class="original">
-                <img src="{{url_for('show_original_image', filename=image_name)}}" alt="Original Image">
+                <img src="{{ url_for('show_original_image', filename=image_name) }}" id="image" alt="Original Image">
             </div>
             <div class="result">
                 <img src="" alt="Result Image">
@@ -27,13 +26,13 @@
         </main>
     </div>
     <div class="col-2">
-        <form action="">
+        <form method="POST" action="" name="filters">
             <ul>
                 <li>
                     <div class="filterWrapper">
                         <span class="filerName">Pixelization</span>
                         <div class="sliderWrapper">
-                            <input class="slider"  type="range" min="0" max="100" step="1"
+                            <input class="slider" type="range" min="0" max="100" step="1"
                                    value="0" oninput="getValueFromRange(this.value, 'pixelization')" onchange="getValueFromRange(this.value, 'pixelization')"/>
                             <span class="filterValue" id="pixelization">0</span>
                         </div>
@@ -85,7 +84,24 @@
                     </div>
                 </li>
             </ul>
+            <input class="submit" id ="retrieve" name="submit_button" type="submit" value="Apply filters">
         </form>
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+       $('#retrieve').click(function(){
+           $.ajax({
+           url: "{{ url_for ('show_edited_image', filename=image_name) }}",
+           type: "GET",
+           success: function(response) {
+               $("#image").attr('src', '/static' + response);
+          },
+          error: function(xhr) {
+            //Do Something to handle error
+         }
+         });
+       });
+    });
+  </script>
 </html>
